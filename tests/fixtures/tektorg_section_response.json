@@ -1,0 +1,1002 @@
+{
+ "total": 17599,
+ "totalPages": 1174,
+ "currentPage": 1,
+ "limitPage": 15,
+ "data": [
+  {
+   "id": 19727490,
+   "remoteId": 20058657,
+   "registryNumber": "20058657/1",
+   "title": "Проведение обслуживания оконных блоков и проемов зданий рудника \"Скалистый\" ЗФ ПАО \"ГМК \"Северный металл\"",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Запрос цен",
+   "organizerName": "ЗФ ПАО «ГМК «Северный металл\"",
+   "inn": "7700000001",
+   "kpp": "245702001",
+   "dates": {
+    "datePublished": "2026-08-21T13:48:26+03:00",
+    "dateEndRegistration": "2026-08-31T08:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 4877,
+     "code": "41.20.40",
+     "name": "Работы строительные по возведению нежилых зданий и сооружений (работы по строительству новых объектов, возведению пристроек, реконструкции и ремонту зданий)",
+     "parent_id": 1939,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23022210,
+      "okpd2_id": 4877
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 1373,
+     "code": "41.20",
+     "name": "Строительство жилых и нежилых зданий",
+     "parent_id": 1372,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23022210,
+      "okved2_id": 1373
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:3:54:11",
+   "typeCustomName": "Запрос цен",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19706599,
+   "remoteId": 20058874,
+   "registryNumber": "20058874/2",
+   "title": "Транспортировка и сортировка грунта, демонтаж обводного газохода, в соответствии с техническим заданием №ЦРПФ 2026-02",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Редукцион",
+   "organizerName": "АО «Кольская ГМК»",
+   "inn": "5191431170",
+   "kpp": "510701001",
+   "dates": {
+    "datePublished": "2026-08-21T08:24:12+03:00",
+    "dateEndRegistration": "2026-08-31T09:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 2788,
+     "code": "82.99",
+     "name": "Услуги вспомогательные, связанные с предпринимательской деятельностью, прочие, не включенные в другие группировки",
+     "parent_id": 2783,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22999552,
+      "okpd2_id": 2788
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 2511,
+     "code": "82.99",
+     "name": "Деятельность по предоставлению прочих вспомогательных услуг для бизнеса, не включенная в другие группировки",
+     "parent_id": 2508,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22999552,
+      "okved2_id": 2511
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:4:0:35",
+   "typeCustomName": "Редукцион",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19706598,
+   "remoteId": 20058881,
+   "registryNumber": "20058881/1",
+   "title": "Выполнение восстановительного ремонта автомобиля марки «Toyota Hillux»: инв.№ 830100045509, гар.№ 0405, гос. № А 395 УН 51, VIN MR0KB3CD200908597,  пл. Мончегорск АО «Кольская ГМК», с МТР Подрядчика, в соответствии с техническим заданием №92_ОА_ТУ",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Редукцион",
+   "organizerName": "АО «Кольская ГМК»",
+   "inn": "5191431170",
+   "kpp": "510701001",
+   "dates": {
+    "datePublished": "2026-08-21T08:16:48+03:00",
+    "dateEndRegistration": "2026-08-31T09:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 2021,
+     "code": "45.20.1",
+     "name": "Услуги по техническому обслуживанию и ремонту легковых автомобилей и легких грузовых автотранспортных средств",
+     "parent_id": 2020,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22999551,
+      "okpd2_id": 2021
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 1451,
+     "code": "45.20.1",
+     "name": "Техническое обслуживание и ремонт легковых автомобилей и легких грузовых автотранспортных средств",
+     "parent_id": 1450,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22999551,
+      "okved2_id": 1451
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:4:0:43",
+   "typeCustomName": "Редукцион",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19641651,
+   "remoteId": 20058718,
+   "registryNumber": "20058718/1",
+   "title": "Оказание транспортных услуг по перевозке оборудования, материалов, технологических и прочих грузов пл. Мончегорск в 2027 году в соответтвии с ТЗ № _91_ОА_ТУ",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Запрос котировок",
+   "organizerName": "АО «Кольская ГМК»",
+   "inn": "5191431170",
+   "kpp": "510701001",
+   "dates": {
+    "datePublished": "2026-08-13T11:45:20+03:00",
+    "dateEndRegistration": "2026-08-31T09:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 2321,
+     "code": "49.41",
+     "name": "Услуги по грузовым перевозкам автомобильным транспортом",
+     "parent_id": 2320,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22917991,
+      "okpd2_id": 2321
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 1913,
+     "code": "49.41",
+     "name": "Деятельность автомобильного грузового транспорта",
+     "parent_id": 1912,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22917991,
+      "okved2_id": 1913
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:7:9:14",
+   "typeCustomName": "Запрос котировок",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19640976,
+   "remoteId": 20058716,
+   "registryNumber": "20058716/1",
+   "title": "Оказание механизированных услуг фронтальными и шахтным (ПДМ) погрузчиками по погрузке и планировке сыпучих и прочих материалов АО «Кольская ГМК» на 2027 год в соответствии с ТЗ № _90_ОА_ТУ",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Запрос котировок",
+   "organizerName": "АО «Кольская ГМК»",
+   "inn": "5191431170",
+   "kpp": "510701001",
+   "dates": {
+    "datePublished": "2026-08-13T10:14:04+03:00",
+    "dateEndRegistration": "2026-08-31T09:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 2321,
+     "code": "49.41",
+     "name": "Услуги по грузовым перевозкам автомобильным транспортом",
+     "parent_id": 2320,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22916867,
+      "okpd2_id": 2321
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 1913,
+     "code": "49.41",
+     "name": "Деятельность автомобильного грузового транспорта",
+     "parent_id": 1912,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22916867,
+      "okved2_id": 1913
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:7:10:45",
+   "typeCustomName": "Запрос котировок",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19640761,
+   "remoteId": 20058709,
+   "registryNumber": "20058709/1",
+   "title": "Оказание механизированных услуг фронтальными погрузчиками на территории промышленной площадки АО «Кольская ГМК» пл. Заполярный, пл.  Никель на 2027 год в соответствии с ТЗ № _88_ОА_ТУ",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Запрос котировок",
+   "organizerName": "АО «Кольская ГМК»",
+   "inn": "5191431170",
+   "kpp": "510701001",
+   "dates": {
+    "datePublished": "2026-08-13T09:27:07+03:00",
+    "dateEndRegistration": "2026-08-31T09:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 2321,
+     "code": "49.41",
+     "name": "Услуги по грузовым перевозкам автомобильным транспортом",
+     "parent_id": 2320,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22916553,
+      "okpd2_id": 2321
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 1913,
+     "code": "49.41",
+     "name": "Деятельность автомобильного грузового транспорта",
+     "parent_id": 1912,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22916553,
+      "okved2_id": 1913
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:7:11:32",
+   "typeCustomName": "Запрос котировок",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19640422,
+   "remoteId": 20058681,
+   "registryNumber": "20058681/1",
+   "title": "Оказание механизированных услуг на территории промышленной площадки АО «Кольская ГМК» пл. Заполярный на 2027 год в соответсвии с ТЗ  № _87_ОА_ТУ",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Запрос котировок",
+   "organizerName": "АО «Кольская ГМК»",
+   "inn": "5191431170",
+   "kpp": "510701001",
+   "dates": {
+    "datePublished": "2026-08-13T08:24:21+03:00",
+    "dateEndRegistration": "2026-08-31T09:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 2321,
+     "code": "49.41",
+     "name": "Услуги по грузовым перевозкам автомобильным транспортом",
+     "parent_id": 2320,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22915856,
+      "okpd2_id": 2321
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 1913,
+     "code": "49.41",
+     "name": "Деятельность автомобильного грузового транспорта",
+     "parent_id": 1912,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22915856,
+      "okved2_id": 1913
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:7:12:35",
+   "typeCustomName": "Запрос котировок",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19728618,
+   "remoteId": 227720,
+   "registryNumber": "ЗП6081799",
+   "title": "Поставка электрооборудования",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Запрос котировок",
+   "organizerName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЭРОПОРТ \"СЕВЕРСК\"",
+   "inn": "2457067174",
+   "kpp": "245701001",
+   "dates": {
+    "datePublished": "2026-08-24T12:00:10+03:00",
+    "dateEndRegistration": "2026-08-31T10:00:00+03:00",
+    "dateEndSecondPartsReview": "2026-09-15T18:59:59+03:00"
+   },
+   "etpLink": "https://zakupki.tektorg.ru/#com/procedure/view/procedure/227720",
+   "sectionAlias": "zakupki",
+   "subsectionAlias": "nornikel",
+   "smallBiz": true,
+   "sumPrice": "173981.72 ₽",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 20359,
+     "code": "26.30.30.190",
+     "name": "Части и комплектующие коммуникационного оборудования прочие",
+     "parent_id": 4142,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023984,
+      "okpd2_id": 20359
+     }
+    },
+    {
+     "id": 13937,
+     "code": "28.24.11.000",
+     "name": "Инструменты ручные электрические",
+     "parent_id": 4408,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023984,
+      "okpd2_id": 13937
+     }
+    },
+    {
+     "id": 14131,
+     "code": "28.93.13.132",
+     "name": "Машины шлифовальные и полировальные",
+     "parent_id": 14129,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023984,
+      "okpd2_id": 14131
+     }
+    }
+   ],
+   "okved2": [],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:2:45:59",
+   "typeCustomName": ""
+  },
+  {
+   "id": 19728260,
+   "remoteId": 20058831,
+   "registryNumber": "20058831/2",
+   "title": "Экспертиза промбезоптехнустройств",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Запрос предложений",
+   "organizerName": "ООО ГРК \"Северное\"",
+   "inn": "7700000002",
+   "kpp": "753601001",
+   "dates": {
+    "datePublished": "2026-08-24T07:04:09+03:00",
+    "dateEndRegistration": "2026-08-31T10:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 2688,
+     "code": "74.90",
+     "name": "Услуги профессиональные, научные и технические, прочие, не включенные в другие группировки",
+     "parent_id": 2687,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023405,
+      "okpd2_id": 2688
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 2398,
+     "code": "74.90",
+     "name": "Деятельность профессиональная, научная и техническая прочая, не включенная в другие группировки",
+     "parent_id": 2397,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023405,
+      "okved2_id": 2398
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:2:50:55",
+   "typeCustomName": "Запрос предложений",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19727775,
+   "remoteId": 20058927,
+   "registryNumber": "20058927/1",
+   "title": "Услуги организации резервного канала связи доступа в сеть Интернет для ООО «ГРК «Северное» по адресу: г. Чита, ул.Трактовая,33 стр.6.",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Запрос предложений",
+   "organizerName": "ООО ГРК \"Северное\"",
+   "inn": "7700000002",
+   "kpp": "753601001",
+   "dates": {
+    "datePublished": "2026-08-23T23:24:17+03:00",
+    "dateEndRegistration": "2026-08-31T10:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 16802,
+     "code": "61.90.10.160",
+     "name": "Услуги связи по предоставлению каналов связи",
+     "parent_id": 5480,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23022621,
+      "okpd2_id": 16802
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 2156,
+     "code": "61.90",
+     "name": "Деятельность в области телекоммуникаций прочая",
+     "parent_id": 2155,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23022621,
+      "okved2_id": 2156
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:2:58:35",
+   "typeCustomName": "Запрос предложений",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19651627,
+   "remoteId": 20058776,
+   "registryNumber": "20058776/2",
+   "title": "Текущий ремонт системы КИПиА ЦЭН, ЦЭО (СН) пл. Мончегорск, с МТР Подрядчика, в соответствии с техническим заданием №249/УпрА",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Редукцион",
+   "organizerName": "АО «Кольская ГМК»",
+   "inn": "5191431170",
+   "kpp": "510701001",
+   "dates": {
+    "datePublished": "2026-08-18T13:56:48+03:00",
+    "dateEndRegistration": "2026-08-31T10:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 15570,
+     "code": "33.13.11.000",
+     "name": "Услуги по ремонту и техническому обслуживанию инструментов и приборов для измерения, испытаний и навигации",
+     "parent_id": 4761,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22936477,
+      "okpd2_id": 15570
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 1271,
+     "code": "33.13",
+     "name": "Ремонт электронного и оптического оборудования",
+     "parent_id": 1268,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22936477,
+      "okved2_id": 1271
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:5:8:3",
+   "typeCustomName": "Редукцион",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19649458,
+   "remoteId": 227116,
+   "registryNumber": "ЗП6081308",
+   "title": "Разработка полного комплекса проектно-изыскательских работ по проекту «Строительство аэровокзального комплекса международного аэропорта «Северск» имени Н.Н. Урванцева»",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Запрос предоставления ценовой информации",
+   "organizerName": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"АЭРОПОРТ \"СЕВЕРСК\"",
+   "inn": "2457067174",
+   "kpp": "245701001",
+   "dates": {
+    "datePublished": "2026-08-18T11:05:47+03:00",
+    "dateEndRegistration": "2026-08-31T10:00:00+03:00"
+   },
+   "etpLink": "https://zakupki.tektorg.ru/#com/procedure/view/procedure/227116",
+   "sectionAlias": "zakupki",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 17042,
+     "code": "71.12.31.000",
+     "name": "Услуги геологические и геофизические консультативные",
+     "parent_id": 5650,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22932465,
+      "okpd2_id": 17042
+     }
+    }
+   ],
+   "okved2": [],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:5:10:54",
+   "typeCustomName": "Анонс"
+  },
+  {
+   "id": 19635473,
+   "remoteId": 20058203,
+   "registryNumber": "20058203/2",
+   "title": "ЦЭН. Нанесение гидроизоляции на основе фотополимерной пасты Phosmat P110 200м2 в рамках промышленных испытаний с МТР Подрядчика, в соответствии с техническим заданием № 101012561096 УГМ",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Редукцион",
+   "organizerName": "АО «Кольская ГМК»",
+   "inn": "5191431170",
+   "kpp": "510701001",
+   "dates": {
+    "datePublished": "2026-08-11T12:28:50+03:00",
+    "dateEndRegistration": "2026-08-31T10:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 16026,
+     "code": "43.99.90.120",
+     "name": "Работы по устройству огнеупорной футеровки промышленных печей и т.п.",
+     "parent_id": 4934,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22906917,
+      "okpd2_id": 16026
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 1427,
+     "code": "43.99.9",
+     "name": "Работы строительные специализированные, не включенные в другие группировки",
+     "parent_id": 1419,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 22906917,
+      "okved2_id": 1427
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:7:57:31",
+   "typeCustomName": "Редукцион",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19728770,
+   "remoteId": 20058940,
+   "registryNumber": "20058940/1",
+   "title": "СИЗ т/к \"Енисей\" по заявке 10767209 / ST-093/26\n\nПросим указывать в КП реальный срок поставки и подгружать действующие Сертификаты в SRM\n\nДопускаются модели спецодежды и СИЗ, прошедшие успешные испытания Согласно Стандарта организации СТО КИСМ 121-212-2014  (п. 7, 9.2) и подтвердившие соответствие техническому заданию, разработанному и утвержденному в МТФ ПАО «ГМК «Северный металл».\n\n\n",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Запрос цен",
+   "organizerName": "МТФ ПАО \"ГМК \"Северный металл\"",
+   "inn": "7700000001",
+   "kpp": "519002001",
+   "dates": {
+    "datePublished": "2026-08-24T09:07:08+03:00",
+    "dateEndRegistration": "2026-08-31T12:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 9644,
+     "code": "14.14.12.140",
+     "name": "Халаты и аналогичные изделия мужские или для мальчиков трикотажные или вязаные",
+     "parent_id": 3480,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23024254,
+      "okpd2_id": 9644
+     }
+    },
+    {
+     "id": 9617,
+     "code": "14.13.21.120",
+     "name": "Куртки мужские или для мальчиков из текстильных материалов, кроме трикотажных или вязаных",
+     "parent_id": 3468,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23024254,
+      "okpd2_id": 9617
+     }
+    },
+    {
+     "id": 9702,
+     "code": "14.19.13.000",
+     "name": "Перчатки, рукавицы (варежки) и митенки трикотажные или вязаные",
+     "parent_id": 3492,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23024254,
+      "okpd2_id": 9702
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 528,
+     "code": "14.13.21",
+     "name": "Производство верхней одежды из текстильных материалов, кроме трикотажных или вязаных, для мужчин или мальчиков",
+     "parent_id": 527,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23024254,
+      "okved2_id": 528
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:2:50:52",
+   "typeCustomName": "Запрос цен",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 19728567,
+   "remoteId": 227712,
+   "registryNumber": "ЗП6081797",
+   "title": "Поставка полиграфической, сувенирной и имиджевой продукции для АО «НТЭК», лот № 138/26 ",
+   "statusName": "Приём заявок",
+   "statusLots": [
+    "Приём заявок"
+   ],
+   "typeName": "Запрос котировок",
+   "organizerName": "АКЦИОНЕРНОЕ ОБЩЕСТВО \"СЕВЕРСКО-ТАЙМЫРСКАЯ ЭНЕРГЕТИЧЕСКАЯ КОМПАНИЯ\"",
+   "inn": "2457058356",
+   "kpp": "245701001",
+   "dates": {
+    "datePublished": "2026-08-24T11:50:05+03:00",
+    "dateEndRegistration": "2026-08-31T12:00:00+03:00",
+    "dateEndFirstPartsReview": "2026-10-26T18:59:59+03:00",
+    "dateEndSecondPartsReview": "2026-11-02T18:59:59+03:00"
+   },
+   "etpLink": "https://zakupki.tektorg.ru/#com/procedure/view/procedure/227712",
+   "sectionAlias": "zakupki",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "3986488.86 ₽",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 9477,
+     "code": "13.96.17.110",
+     "name": "Ткани узкие",
+     "parent_id": 3446,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 9477
+     }
+    },
+    {
+     "id": 15478,
+     "code": "32.99.15.110",
+     "name": "Карандаши простые и цветные с грифелями в твердой оболочке",
+     "parent_id": 4719,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 15478
+     }
+    },
+    {
+     "id": 19007,
+     "code": "58.19.11.100",
+     "name": "Открытки почтовые печатные, открытки поздравительные",
+     "parent_id": 5392,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 19007
+     }
+    },
+    {
+     "id": 15466,
+     "code": "32.99.12.110",
+     "name": "Ручки шариковые",
+     "parent_id": 4716,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 15466
+     }
+    },
+    {
+     "id": 13002,
+     "code": "26.20.40.110",
+     "name": "Устройства и блоки питания вычислительных машин",
+     "parent_id": 4133,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 13002
+     }
+    },
+    {
+     "id": 5397,
+     "code": "58.19.19",
+     "name": "Продукция издательская печатная, прочая, не включенная в другие группировки",
+     "parent_id": 2434,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 5397
+     }
+    },
+    {
+     "id": 10556,
+     "code": "17.23.13.191",
+     "name": "Блокноты, записные книжки и книги для записей",
+     "parent_id": 10555,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 10556
+     }
+    },
+    {
+     "id": 10543,
+     "code": "17.23.12.110",
+     "name": "Конверты, письма-секретки",
+     "parent_id": 3618,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 10543
+     }
+    },
+    {
+     "id": 13532,
+     "code": "27.51.21.190",
+     "name": "Приборы электромеханические бытовые со встроенным электродвигателем прочие, не включенные в другие группировки",
+     "parent_id": 4296,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 13532
+     }
+    },
+    {
+     "id": 9666,
+     "code": "14.14.30.110",
+     "name": "Футболки трикотажные или вязаные",
+     "parent_id": 3488,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 9666
+     }
+    },
+    {
+     "id": 9125,
+     "code": "23.41.11.110",
+     "name": "Посуда столовая и кухонная из фарфора",
+     "parent_id": 3360,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 9125
+     }
+    },
+    {
+     "id": 11983,
+     "code": "22.29.25.000",
+     "name": "Принадлежности канцелярские или школьные пластмассовые",
+     "parent_id": 3901,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 11983
+     }
+    },
+    {
+     "id": 20281,
+     "code": "22.22.11.190",
+     "name": "Мешки и сумки, включая конические, из полимеров этилена прочие",
+     "parent_id": 3882,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 20281
+     }
+    },
+    {
+     "id": 3609,
+     "code": "17.21.13",
+     "name": "Ящики и коробки из гофрированной бумаги или гофрированного картона",
+     "parent_id": 1038,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 3609
+     }
+    },
+    {
+     "id": 3608,
+     "code": "17.21.12",
+     "name": "Мешки и сумки бумажные",
+     "parent_id": 1038,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 3608
+     }
+    },
+    {
+     "id": 10139,
+     "code": "15.12.12.192",
+     "name": "Сумки дорожные, сумочки для косметики, рюкзаки и сумки спортивные из натуральной кожи, сочетаний кожи, листов пластмассы, текстильных материалов, вулканизированных волокон или картона",
+     "parent_id": 10137,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 10139
+     }
+    },
+    {
+     "id": 9750,
+     "code": "14.19.42.120",
+     "name": "Уборы головные прочие из фетра",
+     "parent_id": 3500,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 9750
+     }
+    },
+    {
+     "id": 16673,
+     "code": "58.19.13.120",
+     "name": "Календари печатные",
+     "parent_id": 5394,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 23023892,
+      "okpd2_id": 16673
+     }
+    }
+   ],
+   "okved2": [],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:2:48:9",
+   "typeCustomName": ""
+  }
+ ],
+ "hash": "996e5ab14c2112e621805221cc1c8f23"
+}

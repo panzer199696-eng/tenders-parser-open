@@ -1,0 +1,173 @@
+{
+ "total": 4,
+ "totalPages": 1,
+ "currentPage": 1,
+ "limitPage": 15,
+ "data": [
+  {
+   "id": 16377056,
+   "remoteId": 20049443,
+   "registryNumber": "20049443/2",
+   "title": "Антисептик калия бутиловый",
+   "statusName": "Архив",
+   "statusLots": [
+    "Архив"
+   ],
+   "typeName": "Запрос цен",
+   "organizerName": "ПАО ГМК \"Северный металл\"",
+   "inn": "7700000001",
+   "kpp": "840101001",
+   "dates": {
+    "datePublished": "2025-09-30T20:02:37+03:00",
+    "dateEndRegistration": "2025-10-13T13:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 11506,
+     "code": "20.41.20.190",
+     "name": "Вещества поверхностно-активные прочие",
+     "parent_id": 3786,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 19051462,
+      "okpd2_id": 11506
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 691,
+     "code": "20.41.2",
+     "name": "Производство органических поверхностно-активных веществ, кроме мыла",
+     "parent_id": 689,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 19051462,
+      "okved2_id": 691
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:5:4:57",
+   "typeCustomName": "Запрос цен",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 13318730,
+   "remoteId": 20044329,
+   "registryNumber": "20044329/2",
+   "title": "Антисептик калия бутиловый",
+   "statusName": "Архив",
+   "statusLots": [
+    "Архив"
+   ],
+   "typeName": "Запрос цен",
+   "organizerName": "ПАО ГМК \"Северный металл\"",
+   "inn": "7700000001",
+   "kpp": "840101001",
+   "dates": {
+    "datePublished": "2025-02-27T12:27:09+03:00",
+    "dateEndRegistration": "2025-03-24T19:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [
+    {
+     "id": 11506,
+     "code": "20.41.20.190",
+     "name": "Вещества поверхностно-активные прочие",
+     "parent_id": 3786,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 15439412,
+      "okpd2_id": 11506
+     }
+    }
+   ],
+   "okved2": [
+    {
+     "id": 691,
+     "code": "20.41.2",
+     "name": "Производство органических поверхностно-активных веществ, кроме мыла",
+     "parent_id": 689,
+     "deleted_at": null,
+     "pivot": {
+      "lot_id": 15439412,
+      "okved2_id": 691
+     }
+    }
+   ],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:10:6:32",
+   "typeCustomName": "Запрос цен",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 11139153,
+   "remoteId": 20035767,
+   "registryNumber": "20035767/2",
+   "title": "Антисептик калия бутиловый (225 т)",
+   "statusName": "Архив",
+   "statusLots": [
+    "Архив"
+   ],
+   "typeName": "Запрос цен",
+   "organizerName": "ООО ГРК \"Северное\"",
+   "inn": "7700000002",
+   "kpp": "753601001",
+   "dates": {
+    "datePublished": "2024-05-26T20:22:42+03:00",
+    "dateEndRegistration": "2024-06-01T04:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [],
+   "okved2": [],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:2:7:37",
+   "typeCustomName": "Запрос цен",
+   "etp": "Северметалл"
+  },
+  {
+   "id": 10312317,
+   "remoteId": 20032898,
+   "registryNumber": "20032898/2",
+   "title": "Антисептик калия бутиловый (180 т)",
+   "statusName": "Архив",
+   "statusLots": [
+    "Архив"
+   ],
+   "typeName": "Запрос цен",
+   "organizerName": "ООО ГРК \"Северное\"",
+   "inn": "7700000002",
+   "kpp": "753601001",
+   "dates": {
+    "datePublished": "2024-02-15T20:50:10+03:00",
+    "dateEndRegistration": "2024-03-12T10:00:00+03:00"
+   },
+   "sectionAlias": "nornikel",
+   "subsectionAlias": "nornikel",
+   "smallBiz": false,
+   "sumPrice": "НМЦ не установлена",
+   "securityDepositEnabled": false,
+   "okpd2": [],
+   "okved2": [],
+   "geoPoints": [],
+   "timeToEndRegistration": "0:10:13:9",
+   "typeCustomName": "Запрос цен",
+   "etp": "Северметалл"
+  }
+ ],
+ "hash": "fea519f73ff697a05713ce3c32c90738"
+}

@@ -1,0 +1,68 @@
+{
+  "keywords": [
+    {
+      "phrase": "Насос центробежный",
+      "enabled": true
+    },
+    {
+      "phrase": "Насосный агрегат",
+      "enabled": true
+    },
+    {
+      "phrase": "Насос погружной",
+      "enabled": true
+    },
+    {
+      "phrase": "Запасные части к насосам",
+      "enabled": true
+    },
+    {
+      "phrase": "Подшипники",
+      "enabled": false
+    },
+    {
+      "phrase": "Резинотехнические изделия",
+      "enabled": false
+    },
+    {
+      "phrase": "Лента конвейерная",
+      "enabled": false
+    },
+    {
+      "phrase": "Кабель силовой",
+      "enabled": false
+    },
+    {
+      "phrase": "Кабельная продукция",
+      "enabled": false
+    },
+    {
+      "phrase": "Электродвигатель асинхронный",
+      "enabled": false
+    },
+    {
+      "phrase": "Запорная арматура",
+      "enabled": true
+    },
+    {
+      "phrase": "Задвижка",
+      "enabled": true
+    },
+    {
+      "phrase": "Кран шаровой",
+      "enabled": true
+    },
+    {
+      "phrase": "Металлопрокат",
+      "enabled": false
+    },
+    {
+      "phrase": "Лист стальной",
+      "enabled": false
+    },
+    {
+      "phrase": "Труба стальная",
+      "enabled": false
+    }
+  ]
+}

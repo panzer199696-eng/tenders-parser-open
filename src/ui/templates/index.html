@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TendersParser</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+</head>
+<body>
+  <div class="app">
+    <!-- ── Сайдбар ─────────────────────────────────────────────── -->
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark">T</span>
+        <div class="brand-text">
+          <strong>TendersParser</strong>
+          <small>Мониторинг тендеров · v{{ version }}</small>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="nav-item active" data-tab="feed">
+          <span class="nav-ico">📋</span><span>Лента</span>
+        </button>
+        <button class="nav-item" data-tab="registry">
+          <span class="nav-ico">📒</span><span>Реестр</span>
+        </button>
+        <button class="nav-item" data-tab="dashboard">
+          <span class="nav-ico">📊</span><span>Дашборд</span>
+        </button>
+        <button class="nav-item" data-tab="companies">
+          <span class="nav-ico">🏢</span><span>Компании</span>
+        </button>
+        <button class="nav-item" data-tab="keywords">
+          <span class="nav-ico">🔖</span><span>Ключевые слова</span>
+        </button>
+        <button class="nav-item" data-tab="reports">
+          <span class="nav-ico">📈</span><span>Отчёты</span>
+        </button>
+        <button class="nav-item" data-tab="catalog">
+          <span class="nav-ico">📚</span><span>Справочники</span>
+        </button>
+        <button class="nav-item" data-tab="settings">
+          <span class="nav-ico">⚙</span><span>Настройки</span>
+        </button>
+        <button class="nav-item" data-tab="logs">
+          <span class="nav-ico">📄</span><span>Логи</span>
+        </button>
+        <button class="nav-item" data-tab="help">
+          <span class="nav-ico">❓</span><span>Инструкция</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <button class="nav-item nav-exit" id="btn-shutdown">
+          <span class="nav-ico">⏻</span><span>Выход</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- ── Рабочая область ─────────────────────────────────────── -->
+    <main class="workspace">
+
+      <!-- ───── 1. Дашборд ───── -->
+      <section class="panel active" id="tab-feed">
+        <div class="card">
+          <div class="card-head">
+            <h2>Лента лотов</h2>
+            <div class="feed-actions">
+              <span class="muted" id="feed-summary">загрузка…</span>
+              <button class="btn btn-ghost" id="btn-feed-refresh">Обновить</button>
+              <button class="btn btn-ghost" id="btn-feed-rescore" title="Пересчитать оценки по текущим справочникам">Пересчитать оценки</button>
+            </div>
+          </div>
+          <div id="feed-fresh" class="feed-fresh" hidden></div>
+          <div id="feed-topics" class="feed-topics"></div>
+          <div id="feed-body" class="feed"></div>
+        </div>
+      </section>
+
+      <section class="panel" id="tab-registry">
+        <div class="card">
+          <div class="card-head">
+            <h2>Реестр заявок</h2>
+            <div class="feed-actions">
+              <span class="muted" id="reg-summary">загрузка…</span>
+              <button class="btn btn-ghost" id="btn-reg-refresh">Обновить</button>
+            </div>
+          </div>
+          <div id="reg-red" class="reg-red"></div>
+          <div id="reg-body" class="feed"></div>
+        </div>
+      </section>
+
+      <section class="panel" id="tab-dashboard">
+        <div class="tiles">
+          <div class="tile"><div class="tile-val" id="tile-companies">—</div><div class="tile-lbl">Компаний</div></div>
+          <div class="tile"><div class="tile-val" id="tile-keywords">—</div><div class="tile-lbl">Включённых фраз</div></div>
+          <div class="tile"><div class="tile-val" id="tile-today">—</div><div class="tile-lbl">Тендеров за сегодня</div></div>
+          <div class="tile"><div class="tile-val accent" id="tile-found">—</div><div class="tile-lbl">Найдено закупок</div></div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2>Парсинг <span class="build-badge" title="Номер сборки">сборка v{{ version }}</span></h2>
+            <div class="run-meta">
+              <span id="run-timer" class="timer"></span>
+              <span id="run-status" class="run-status idle">Готов к запуску</span>
+            </div>
+          </div>
+
+          <div class="btn-row">
+            <button class="btn btn-primary btn-lg" id="btn-parse">▶ Запустить парсинг</button>
+            <button class="btn btn-danger btn-lg hidden" id="btn-stop" title="Прервать текущий парсинг — уже найденное не сохраняется">⏹ Остановить</button>
+          </div>
+
+          <div id="parse-progress" class="parse-progress hidden">
+            <div class="pp-row">
+              <span>Обрабатываю: <b id="current-company">—</b></span>
+              <span id="progress-counter" class="mono">0 / 0</span>
+            </div>
+            <div class="bar"><div id="progress-fill" class="bar-fill"></div></div>
+          </div>
+
+          <div id="log-feed" class="log-feed">Нажмите «Запустить парсинг» для начала.</div>
+
+          <div class="btn-row">
+            <button class="btn btn-secondary" id="diag-save">🩺 Собрать диагностику</button>
+          </div>
+        </div>
+
+        <div id="result-card" class="card hidden">
+          <div class="card-head"><h2>Результат</h2></div>
+          <p>Найдено тендеров: <b id="result-count">0</b></p>
+
+          <!-- Полнота сбора: показывает, всё ли удалось собрать у площадки -->
+          <div id="completeness" class="hidden">
+            <p id="completeness-line"></p>
+            <ul id="completeness-list" class="prose"></ul>
+          </div>
+          <p class="muted small">Файл Excel:<br><code id="result-path">—</code></p>
+          <div class="btn-row">
+            <button class="btn btn-success" id="excel-open">📂 Открыть папку с файлом</button>
+            <button class="btn btn-secondary" id="excel-save">💾 Сохранить ещё раз</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ───── 2. Компании ───── -->
+      <section class="panel" id="tab-companies">
+        <div class="card">
+          <div class="field-row">
+            <div class="field grow">
+              <label>Добавить компанию
+                <span class="tip" tabindex="0">?<span class="tip-body">Указывайте название организатора так, как оно пишется на площадке — по нему ищутся тендера ОТ этой компании.</span></span>
+              </label>
+              <input type="text" id="company-input" placeholder="Например: ООО «Ромашка»">
+            </div>
+            <button class="btn btn-primary" id="company-add">Добавить</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">
+            <h2>Список компаний <span id="company-count" class="muted"></span></h2>
+            <input type="search" id="company-filter" class="search" placeholder="Фильтр…">
+          </div>
+          <div id="company-list" class="list"></div>
+        </div>
+      </section>
+
+      <!-- ───── 3. Ключевые слова ───── -->
+      <section class="panel" id="tab-keywords">
+        <div class="card">
+          <label class="check">
+            <input type="checkbox" id="kw-filter">
+            <span>Фильтровать все результаты по фразам</span>
+            <span class="tip" tabindex="0">?<span class="tip-body">Останутся только тендеры, в названии которых есть хотя бы одна включённая фраза. Действует и на Tender.pro.</span></span>
+          </label>
+        </div>
+
+        <div class="card">
+          <div class="field-row">
+            <div class="field grow">
+              <label>Добавить фразу</label>
+              <input type="text" id="kw-input" placeholder="Например: строительство моста">
+            </div>
+            <button class="btn btn-primary" id="kw-add">Добавить</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><h2>Фразы <span id="kw-count" class="muted"></span></h2></div>
+          <div id="kw-list" class="list"></div>
+        </div>
+      </section>
+
+      <!-- ───── 4. Настройки ───── -->
+      <section class="panel" id="tab-reports">
+        <div class="card">
+          <div class="card-head">
+            <h2>Отчёты</h2>
+            <span class="muted" id="rep-summary">загрузка…</span>
+          </div>
+          <div id="rep-body"></div>
+        </div>
+      </section>
+
+      <section class="panel" id="tab-catalog">
+        <div class="card">
+          <div class="card-head">
+            <h2>Справочники</h2>
+            <div class="feed-actions">
+              <span class="muted" id="cat-status">загрузка…</span>
+            </div>
+          </div>
+          <p class="muted cat-hint">
+            Здесь задаётся, что мы ищем и у кого. Фразы поиска, объекты обхода и список ИНН
+            программа пересобирает сама при сохранении — вручную синхронизировать ничего не нужно.
+          </p>
+
+          <div class="cat-tabs">
+            <button class="cat-tab active" data-cat="nomenclature">Номенклатура</button>
+            <button class="cat-tab" data-cat="clients">Заказчики</button>
+          </div>
+
+          <div id="cat-nomenclature" class="cat-pane active"></div>
+          <div id="cat-clients" class="cat-pane"></div>
+        </div>
+      </section>
+
+      <section class="panel" id="tab-settings">
+        <div class="card">
+          <h2>Параметры поиска</h2>
+          <div class="grid2">
+            <div class="field">
+              <label>Ваше имя
+                <span class="tip" tabindex="0">?<span class="tip-body">Этим именем подписываются решения «Беру» и «Мимо» в реестре заявок. Заполните, если программой пользуется не один человек.</span></span>
+              </label>
+              <input type="text" id="set-manager" placeholder="например, Иван">
+            </div>
+            <div class="field">
+              <label>Период поиска, дней
+                <span class="tip" tabindex="0">?<span class="tip-body">Насколько глубоко назад по дате публикации искать — на площадках, которые позволяют отбор по дате (Tender.pro, ГПБ, ЕИС). После пропущенной ночи программа сама листает глубже, но не больше недели.</span></span>
+              </label>
+              <input type="number" id="set-days" min="1" max="365" value="1">
+            </div>
+            <div class="field">
+              <label>Мин. цена, ₽ (0 — без порога)
+                <span class="tip" tabindex="0">?<span class="tip-body">Тендеры дешевле этой суммы отбрасываются. Тендеры без цены проходят согласно настройке ниже.</span></span>
+              </label>
+              <input type="number" id="set-min" min="0" value="0">
+            </div>
+            <div class="field">
+              <label>Макс. цена, ₽ (0 — без потолка)</label>
+              <input type="number" id="set-max" min="0" value="0">
+            </div>
+            <div class="field">
+              <label>&nbsp;</label>
+              <label class="check"><input type="checkbox" id="set-noprice"><span>Включать тендеры без указанной цены</span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Площадки</h2>
+          <label class="check"><input type="checkbox" id="set-tp"><span>Tender.pro</span></label>
+          <label class="check">
+            <input type="checkbox" id="set-gpb">
+            <span>ГПБ ТЭК</span>
+            <span class="tip" tabindex="0">?<span class="tip-body">Сайт нестабилен, включайте при необходимости.</span></span>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="set-zakupki">
+            <span>ЕИС (zakupki.gov.ru)</span>
+            <span class="tip" tabindex="0">?<span class="tip-body">Госзакупки 44-ФЗ/223-ФЗ через RSS расширенного поиска, только по ключевым словам. Выключено по умолчанию: поиск по общей номенклатуре тащит много нерелевантного.</span></span>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="set-tektorg">
+            <span>ТЭК-Торг</span>
+            <span class="tip" tabindex="0">?<span class="tip-body">Корпоративные закупки крупных промышленных групп. Поиск идёт по ключевым словам (если фразы не заданы — обход секций с отбором по вашим компаниям). Вход, браузер и капча не нужны.</span></span>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="set-roseltorg">
+            <span>Росэлторг</span>
+            <span class="tip" tabindex="0">?<span class="tip-body">Ищет по ключевым словам и адресно по ИНН ваших заказчиков — ИНН берутся из справочника клиентов. Вход, браузер и капча не нужны. Учтите: поиск по фразе на этой площадке нестрогий (по запросу «насос центробежный» она добавит и запчасти к насосам, и услуги ремонта), лишнее отсеет профиль.</span></span>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="set-bidzaar">
+            <span>Bidzaar (агрегатор закупок России)</span>
+            <span class="tip" tabindex="0">?<span class="tip-body">Собирает закупки со всех площадок страны разом. Ищет по ключевым словам и по названиям ваших заказчиков. Вход, браузер и капча не нужны. Поиск нестрогий: по запросу «кабель силовой» может привести и кабельные работы — лишнее отсеет профиль.</span></span>
+          </label>
+          <label class="check">
+            <input type="checkbox" id="set-headless">
+            <span>Показывать окно браузера при парсинге</span>
+            <span class="tip" tabindex="0">?<span class="tip-body">Полезно, если площадка просит капчу — тогда её можно решить вручную в открывшемся окне.</span></span>
+          </label>
+        </div>
+
+        <div class="card">
+          <h2>Расписание сбора</h2>
+          <p class="muted cat-hint">
+            Программа сама обойдёт площадки в заданное время. Если компьютер в этот момент
+            был выключен, пропущенный сбор выполнится при следующем запуске программы — день
+            не потеряется.
+          </p>
+          <label class="check">
+            <input type="checkbox" id="sched-enabled">
+            <span>Собирать по расписанию</span>
+          </label>
+          <div class="sched-row">
+            <div class="field">
+              <label for="sched-time">ВРЕМЯ</label>
+              <input type="time" id="sched-time" value="03:00">
+            </div>
+            <div class="field sched-days">
+              <label>ДНИ НЕДЕЛИ</label>
+              <div id="sched-days"></div>
+            </div>
+          </div>
+          <label class="check">
+            <input type="checkbox" id="sched-catchup" checked>
+            <span>Догонять пропущенный сбор при запуске</span>
+          </label>
+          <div class="btn-row">
+            <button class="btn btn-primary" id="sched-save">Сохранить расписание</button>
+            <span class="muted" id="sched-status"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <button class="btn btn-success btn-lg" id="settings-save">Сохранить настройки</button>
+        </div>
+      </section>
+
+      <!-- ───── 5. Логи ───── -->
+      <section class="panel" id="tab-logs">
+        <div class="card">
+          <div class="card-head">
+            <h2>Хвост parser.log</h2>
+            <div class="btn-row">
+              <input type="search" id="log-filter" class="search" placeholder="Фильтр по подстроке…">
+              <label class="check small"><input type="checkbox" id="log-autoscroll" checked><span>Автопрокрутка</span></label>
+              <button class="btn btn-secondary btn-sm" id="log-refresh">Обновить</button>
+            </div>
+          </div>
+          <pre id="log-view" class="log-view"></pre>
+        </div>
+      </section>
+
+      <!-- ───── 6. Инструкция ───── -->
+      <section class="panel" id="tab-help">
+        <div class="card prose">
+          <h2>Инструкция</h2>
+          <ol>
+            <li><b>Заполните справочники</b> на вкладке «Справочники»: номенклатуру (что ищем) и заказчиков (у кого). Фразы поиска, список компаний и ИНН программа пересоберёт сама.</li>
+            <li><b>Проверьте список компаний</b> на вкладке «Компании» и ключевые фразы на вкладке «Ключевые слова». Лишнее можно удалить, своё — добавить.</li>
+            <li><b>Нажмите «Запустить парсинг»</b> на «Дашборде». Если чего-то не хватает, программа скажет об этом до запуска.</li>
+            <li><b>Заберите файл.</b> Excel сохраняется автоматически в папку результатов. На «Дашборде» появится путь и кнопка «Открыть папку с файлом». Ссылки в файле кликабельные.</li>
+            <li><b>Если что-то пошло не так</b> — «🩺 Собрать диагностику» на «Дашборде»: архив с хвостом журнала и настройками (без секретов) ляжет в ту же папку.</li>
+          </ol>
+
+          <h3>Сколько это занимает</h3>
+          <p class="muted">Зависит от числа компаний, фраз и площадок. Площадки ограничивают частоту запросов, поэтому программа специально делает паузы — не уменьшайте их: без пауз площадка начинает отдавать капчу, и часть данных теряется.</p>
+
+          <h3>Типовые проблемы</h3>
+          <table class="tbl">
+            <thead><tr><th>Что видно</th><th>Что делать</th></tr></thead>
+            <tbody>
+              <tr><td>В логе «площадка ограничила скорость» или «антибот»</td><td>Программа сама подождёт и повторит. Если обход остановился — повторите запуск позже либо включите «Показывать окно браузера».</td></tr>
+              <tr><td>Парсинг ничего не нашёл</td><td>Проверьте, что включена хотя бы одна площадка, а список компаний или фраз не пуст.</td></tr>
+              <tr><td>Не нахожу файл Excel</td><td>«Дашборд» → «Открыть папку с файлом». При запуске из исходников отчёты лежат в папке <code>results</code> рядом с программой.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ── Тосты ─────────────────────────────────────────────────── -->
+  <div id="toasts" class="toasts"></div>
+  <!-- Подтверждение выхода -->
+  <div id="shutdown-confirm" class="modal hidden">
+    <div class="modal-box">
+      <h3>Завершить работу?</h3>
+      <p>Программа закроется.</p>
+      <div class="btn-row right">
+        <button class="btn btn-secondary" id="shutdown-cancel">Отмена</button>
+        <button class="btn btn-danger" id="shutdown-ok">Выйти</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Универсальное подтверждение (вместо системного confirm, который
+       в окне приложения не показывается) -->
+  <div id="ask-modal" class="modal hidden">
+    <div class="modal-box">
+      <h3 id="ask-title">Подтвердите действие</h3>
+      <p id="ask-text"></p>
+      <div class="btn-row right">
+        <button class="btn btn-secondary" id="ask-no">Отмена</button>
+        <button class="btn btn-danger" id="ask-yes">Да</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Что мешает запустить парсинг -->
+  <div id="preflight-modal" class="modal hidden">
+    <div class="modal-box">
+      <h3 id="preflight-title">Прежде чем запускать</h3>
+      <ul id="preflight-list" class="prose"></ul>
+      <div class="btn-row right">
+        <button class="btn btn-primary" id="preflight-fix">Перейти в настройки</button>
+        <button class="btn btn-secondary" id="preflight-force">Всё равно запустить</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="lot-modal" class="lot-modal hidden">
+    <div class="lot-modal-box">
+      <button class="lot-modal-close" id="lot-modal-close" title="Закрыть">×</button>
+      <div id="lot-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Форма шага воронки (ТЗ-9). Своя модалка, а не системные
+       alert/confirm/prompt: в окне WebView2 системные диалоги не
+       показываются и подвешивают интерфейс — нажатие выглядело бы как
+       «ничего не произошло». Поля подставляются по шагу из app.js. -->
+  <div id="step-modal" class="lot-modal hidden">
+    <div class="lot-modal-box step-modal-box">
+      <button class="lot-modal-close" id="step-modal-close" title="Закрыть">×</button>
+      <div id="step-modal-body"></div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

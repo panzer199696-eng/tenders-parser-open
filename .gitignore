@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual env
+.venv/
+venv/
+env/
+
+# Secrets / sessions
+.env
+*_session.json
+
+# Logs
+*.log
+logs/
+
+# Live data: database, catalogs edited by the user, run journal
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Results and exports
+results/
+results_*.xlsx
+export_*.xlsx
+
+# User settings of a dev run (shipped defaults live in defaults/)
+settings.json
+
+# Debug artifacts
+debug.html
+diag_screenshots/
+
+# Backups
+*.bak
+*.bak-*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# PyInstaller (if you build an exe yourself)
+build/
+dist/

@@ -1,0 +1,54 @@
+{
+  "totalCount": 2,
+  "items": [
+    {
+      "id": "1cdf7785-3f2e-4a5b-8c9d-0e1f2a3b4c5d",
+      "name": "РАСЦЕНКА. ЗИП к плунжерным дозаторам",
+      "externalId": "369-685",
+      "status": 1,
+      "acceptanceStartDate": "2026-09-01T06:36:45Z",
+      "acceptanceEndDate": "2026-09-04T09:00:00Z",
+      "tags": [
+        "промышленные реагенты",
+        "реагенты"
+      ],
+      "tradingType": 1,
+      "company": {
+        "name": "ООО \"ВОСТОЧНАЯ МЕДЬ\"",
+        "companyId": "7f0c9a2e-1111-4222-8333-444455556666",
+        "friendlyUrl": "udokanskaya-medi"
+      },
+      "deliveryAddresses": [
+        {
+          "city": "г. Уссурийск",
+          "region": "Приморский край"
+        }
+      ],
+      "procedureId": "01a06ad3-3a16-7c33-88fe-ae3405bcfd61"
+    },
+    {
+      "id": "2bef8896-4a3f-5b6c-9d0e-1f2a3b4c5d6e",
+      "name": "Мониторинг цен по хим. реагентам для цеха",
+      "externalId": "370-114",
+      "status": 1,
+      "acceptanceStartDate": "2026-08-30T12:00:00Z",
+      "acceptanceEndDate": "2026-09-05T06:30:00Z",
+      "tags": [
+        "реагенты"
+      ],
+      "tradingType": 1,
+      "company": {
+        "name": "АО \"РОМАШКА\"",
+        "companyId": "9a1b8c3d-2222-4333-8444-555566667777",
+        "friendlyUrl": "visochayshiy"
+      },
+      "deliveryAddresses": [
+        {
+          "city": "пгт Большой Нимныр",
+          "region": "Амурская область"
+        }
+      ],
+      "procedureId": "01a06ad3-3a16-7c33-88fe-ae3405bcfd62"
+    }
+  ]
+}
